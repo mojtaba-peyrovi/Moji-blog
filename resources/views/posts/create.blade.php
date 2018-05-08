@@ -4,6 +4,7 @@
         <div class="col-md-8">
             <h1>create a post</h1>
             <hr>
+
             <form method="POST" action="/posts">
                 {{ csrf_field() }}
               <div class="form-group">
@@ -14,7 +15,11 @@
               <textarea id="body" name="body" class="form-control"></textarea>
               <button type="submit" class="btn btn-info mt-2 float-right">Publish</button>
             </form>
+
+            @include('layouts.errors')
+
         </div>
+
         <div class="col-md-4">
             @include('layouts.sidebar')
         </div>
