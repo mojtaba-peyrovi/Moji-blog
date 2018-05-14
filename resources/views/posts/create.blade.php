@@ -16,7 +16,7 @@
               <button type="submit" class="btn btn-info mt-2 float-right">Publish</button>
             </form>
 
-            @include('layouts.errors')
+            @include('partials.errors')
 
         </div>
 
