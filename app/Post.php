@@ -21,9 +21,9 @@ class Post extends Model
         $this->comments()->create(compact('body'));
     }
 
-    public function posts()
+    public function user()
     {
-        return $this->hasMany(Post::class);
+        return $this->belongsTo(User::class);
     }
 
 }

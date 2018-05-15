@@ -7,5 +7,7 @@ Route::POST('/posts','PostsController@store');
 Route::POST('/posts/{post}/comments','CommentsController@store');
 Route::get('/register','RegistrationController@create')->name('register');
 Route::POST('/register', 'RegistrationController@store');
-Route::get('/login','SessionsController@create');
+Route::get('/login','SessionsController@create')->name('login');
+Route::POST('/login','SessionsController@store');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout','SessionsController@destroy');
