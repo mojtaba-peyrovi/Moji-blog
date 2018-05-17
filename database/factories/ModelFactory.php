@@ -27,7 +27,9 @@ $factory->define(App\Post::class, function (Faker\Generator $faker) {
 
 
     return [
-        'user_id' => $faker->numberBetween($min = 1, $max = 150),
+        'user_id' => function() {
+            return factory(App\User::class)->create()->id;
+        },
         'title' => $faker->sentence,
         'body' => $faker->paragraph,
         'created_at' => $faker->date($format = 'Y-m-d', $max = 'now')
@@ -39,8 +41,13 @@ $factory->define(App\Comment::class, function (Faker\Generator $faker) {
 
 
     return [
-        'user_id' => $faker->numberBetween($min = 1, $max = 150),
-        'post_id' => $faker->numberBetween($min = 1, $max = 50),
-        'body' => $faker->sentence
+        'user_id' => function() {
+            return factory(App\User::class)->create()->id;
+        },
+        'post_id' => function() {
+            return factory(App\Post::class)->create()->id;
+        },
+        'body' => $faker->sentence,
+        'created_at' => $faker->date($format = 'Y-m-d', $max = 'now')
     ];
 });

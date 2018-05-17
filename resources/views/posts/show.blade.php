@@ -14,7 +14,7 @@
                     <h6 class="card-title">{{ $post->title }}<span class="text-muted float-right" style="font-family:Helvetica;font-size:0.7em;">{{ $post->created_at->diffForHumans()}}</span></h6>
 
                     <p class="card-text">
-                        {{ $post->user->name }} :
+                        {{ $post->user['name'] }} :
                         {{ $post->body }}
                     </p>
                    </div>
