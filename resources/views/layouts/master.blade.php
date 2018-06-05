@@ -8,6 +8,13 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
+    <style media="screen">
+        .file-field.big .file-path-wrapper {
+        height: 3.2rem; }
+        .file-field.big .file-path-wrapper .file-path {
+        height: 3rem; }
+    </style>
+
     <title>Blog by Moji</title>
 
     <!-- Bootstrap core CSS -->

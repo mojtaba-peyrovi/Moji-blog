@@ -49,4 +49,9 @@ class User extends Authenticatable
         //     'user_id' => auth()->user()->id
         // ]);
     }
+
+    public static function getUserImage(Request $request)
+    {
+
+    }
 }
